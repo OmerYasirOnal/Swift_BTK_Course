@@ -15,13 +15,72 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var productPrice: UITextField!
     @IBOutlet weak var productSize: UITextField!
     
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var secilenIsim = ""
+    var secilenId : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        if secilenIsim != ""{
+            imageView.isUserInteractionEnabled = false
+            productName.isEnabled = false
+            productSize.isEnabled = false
+            productPrice.isEnabled = false
+            saveButton.isHidden = true
+
+            if let uuid = secilenId?.uuidString{
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                let context = appDelegate.persistentContainer.viewContext
+                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Alisveris")
+                fetchRequest.predicate = NSPredicate(format: "id = %@", uuid)
+                fetchRequest.returnsObjectsAsFaults = false
+                
+                do {
+                    let sonuclar = try context.fetch(fetchRequest)
+                    
+                    if sonuclar.count > 0 {
+                        for sonuc in sonuclar as! [NSManagedObject]{
+                            if let isim = sonuc.value(forKey: "isim") as? String{
+                                productName.text = isim
+                            }
+                            if let fiyat = sonuc.value(forKey: "fiyat") as? Int{
+                                productPrice.text = String(fiyat)
+                            }
+                            if let beden = sonuc.value(forKey: "beden") as? String{
+                                productSize.text = beden
+                            }
+                            if let gorselData = sonuc.value(forKey: "gorsel") as? Data{
+                                let image = UIImage(data: gorselData)
+                                imageView.image  = image
+                            }
+                            
+                                
+                        }
+                    }
+                    
+                } catch {
+                    
+                }
+            }
+                
+        } else {
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
+            productName.text = ""
+            productSize.text = ""
+            productPrice.text = ""
+            imageView.isUserInteractionEnabled = true
+
+
+        }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
-        imageView.isUserInteractionEnabled = true
         
         let imageGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         imageView.addGestureRecognizer(imageGestureRecognizer)
@@ -32,6 +91,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate &
         picker.delegate = self
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
+        productName.isEnabled = true
+        productSize.isEnabled = true
+        productPrice.isEnabled = true
         present(picker,animated: true,completion: nil)
     }
     
@@ -39,12 +101,14 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate &
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             imageView.image = pickedImage
             }
+        saveButton.isEnabled = true
         self.dismiss(animated: true)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true)
     }
+    
     @objc func dismissKeyboard() {
            // Klavyeyi gizle
            view.endEditing(true)
@@ -75,7 +139,13 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate &
             print("Hata var")
 
         }
-                                                            
+                        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "verilerGirildi"), object: nil)
+        navigationController?.popViewController(animated: true)
+        productName.text = ""
+        productSize.text = ""
+        productPrice.text = ""
+        imageView.image = nil
 
 
         
