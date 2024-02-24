@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060DFB932B89CA780010E910 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFB922B89CA780010E910 /* FeedViewController.swift */; };
+		060DFB952B89CA830010E910 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFB942B89CA830010E910 /* UploadViewController.swift */; };
+		060DFB972B89CA8C0010E910 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060DFB962B89CA8C0010E910 /* SettingsViewController.swift */; };
 		06CC53B42B86000A00037DC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53B32B86000A00037DC2 /* AppDelegate.swift */; };
 		06CC53B62B86000A00037DC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53B52B86000A00037DC2 /* SceneDelegate.swift */; };
 		06CC53B82B86000A00037DC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC53B72B86000A00037DC2 /* ViewController.swift */; };
 		06CC53BB2B86000A00037DC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CC53B92B86000A00037DC2 /* Main.storyboard */; };
 		06CC53BD2B86000B00037DC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CC53BC2B86000B00037DC2 /* Assets.xcassets */; };
 		06CC53C02B86000B00037DC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CC53BE2B86000B00037DC2 /* LaunchScreen.storyboard */; };
+		06CC53C82B86148900037DC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06CC53C72B86148900037DC2 /* GoogleService-Info.plist */; };
+		59BA7ADA580C063F2AA9A274 /* Pods_FotografPaylasmaUygulamasi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B0CC9B217CC9E5AA875EFB /* Pods_FotografPaylasmaUygulamasi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060DFB922B89CA780010E910 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		060DFB942B89CA830010E910 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		060DFB962B89CA8C0010E910 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		06CC53B02B86000A00037DC2 /* FotografPaylasmaUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FotografPaylasmaUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CC53B32B86000A00037DC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CC53B52B86000A00037DC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,10 @@
 		06CC53BC2B86000B00037DC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06CC53BF2B86000B00037DC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06CC53C12B86000B00037DC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CC53C72B86148900037DC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0992C86E1AF68F5E9FE239EF /* Pods-FotografPaylasmaUygulamasi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotografPaylasmaUygulamasi.debug.xcconfig"; path = "Target Support Files/Pods-FotografPaylasmaUygulamasi/Pods-FotografPaylasmaUygulamasi.debug.xcconfig"; sourceTree = "<group>"; };
+		1CD790C122F7AB836A03F8E5 /* Pods-FotografPaylasmaUygulamasi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FotografPaylasmaUygulamasi.release.xcconfig"; path = "Target Support Files/Pods-FotografPaylasmaUygulamasi/Pods-FotografPaylasmaUygulamasi.release.xcconfig"; sourceTree = "<group>"; };
+		20B0CC9B217CC9E5AA875EFB /* Pods_FotografPaylasmaUygulamasi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FotografPaylasmaUygulamasi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59BA7ADA580C063F2AA9A274 /* Pods_FotografPaylasmaUygulamasi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +55,8 @@
 			children = (
 				06CC53B22B86000A00037DC2 /* FotografPaylasmaUygulamasi */,
 				06CC53B12B86000A00037DC2 /* Products */,
+				DD6BAFF76122875D3B80420A /* Pods */,
+				143B65B2536D58595BD87219 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +78,29 @@
 				06CC53BC2B86000B00037DC2 /* Assets.xcassets */,
 				06CC53BE2B86000B00037DC2 /* LaunchScreen.storyboard */,
 				06CC53C12B86000B00037DC2 /* Info.plist */,
+				06CC53C72B86148900037DC2 /* GoogleService-Info.plist */,
+				060DFB922B89CA780010E910 /* FeedViewController.swift */,
+				060DFB942B89CA830010E910 /* UploadViewController.swift */,
+				060DFB962B89CA8C0010E910 /* SettingsViewController.swift */,
 			);
 			path = FotografPaylasmaUygulamasi;
+			sourceTree = "<group>";
+		};
+		143B65B2536D58595BD87219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20B0CC9B217CC9E5AA875EFB /* Pods_FotografPaylasmaUygulamasi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD6BAFF76122875D3B80420A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0992C86E1AF68F5E9FE239EF /* Pods-FotografPaylasmaUygulamasi.debug.xcconfig */,
+				1CD790C122F7AB836A03F8E5 /* Pods-FotografPaylasmaUygulamasi.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06CC53C42B86000B00037DC2 /* Build configuration list for PBXNativeTarget "FotografPaylasmaUygulamasi" */;
 			buildPhases = (
+				F7FF1F2F6B4760AF2E504BD9 /* [CP] Check Pods Manifest.lock */,
 				06CC53AC2B86000A00037DC2 /* Sources */,
 				06CC53AD2B86000A00037DC2 /* Frameworks */,
 				06CC53AE2B86000A00037DC2 /* Resources */,
+				7F6404FA5D4BDBE92E9904B9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CC53C02B86000B00037DC2 /* LaunchScreen.storyboard in Resources */,
+				06CC53C82B86148900037DC2 /* GoogleService-Info.plist in Resources */,
 				06CC53BD2B86000B00037DC2 /* Assets.xcassets in Resources */,
 				06CC53BB2B86000A00037DC2 /* Main.storyboard in Resources */,
 			);
@@ -133,14 +172,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7F6404FA5D4BDBE92E9904B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FotografPaylasmaUygulamasi/Pods-FotografPaylasmaUygulamasi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FotografPaylasmaUygulamasi/Pods-FotografPaylasmaUygulamasi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FotografPaylasmaUygulamasi/Pods-FotografPaylasmaUygulamasi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7FF1F2F6B4760AF2E504BD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FotografPaylasmaUygulamasi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		06CC53AC2B86000A00037DC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				06CC53B82B86000A00037DC2 /* ViewController.swift in Sources */,
+				060DFB952B89CA830010E910 /* UploadViewController.swift in Sources */,
 				06CC53B42B86000A00037DC2 /* AppDelegate.swift in Sources */,
+				060DFB932B89CA780010E910 /* FeedViewController.swift in Sources */,
 				06CC53B62B86000A00037DC2 /* SceneDelegate.swift in Sources */,
+				060DFB972B89CA8C0010E910 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,7 +287,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,7 +350,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,12 +371,14 @@
 		};
 		06CC53C52B86000B00037DC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0992C86E1AF68F5E9FE239EF /* Pods-FotografPaylasmaUygulamasi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9X8FDSW5D8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FotografPaylasmaUygulamasi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,12 +401,14 @@
 		};
 		06CC53C62B86000B00037DC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CD790C122F7AB836A03F8E5 /* Pods-FotografPaylasmaUygulamasi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9X8FDSW5D8;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FotografPaylasmaUygulamasi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
