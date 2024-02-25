@@ -128,14 +128,55 @@
                     <view key="view" contentMode="scaleToFill" id="Mml-Zg-ijJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgx-a5-WZx">
+                                <rect key="frame" x="49" y="386" width="317" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0x8-8J-Oyf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuY-If-HFw">
+                                <rect key="frame" x="162" y="480" width="90" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="g7R-Xp-Usi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Upload">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="uploadButtonTiklandi:" destination="okO-Um-Yzn" eventType="touchUpInside" id="Bgw-8B-c0x"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselSec" translatesAutoresizingMaskIntoConstraints="NO" id="OXo-ce-aY3">
+                                <rect key="frame" x="0.0" y="76" width="414" height="284"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZtN-WS-em6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OXo-ce-aY3" firstAttribute="leading" secondItem="ZtN-WS-em6" secondAttribute="leading" id="9Zq-zU-cSC"/>
+                            <constraint firstItem="bgx-a5-WZx" firstAttribute="leading" secondItem="ZtN-WS-em6" secondAttribute="leading" constant="49" id="A8K-nq-v5x"/>
+                            <constraint firstItem="OXo-ce-aY3" firstAttribute="top" secondItem="ZtN-WS-em6" secondAttribute="top" constant="76" id="Dja-Qr-s5v"/>
+                            <constraint firstItem="OXo-ce-aY3" firstAttribute="centerX" secondItem="bgx-a5-WZx" secondAttribute="centerX" id="ESq-dk-qWY"/>
+                            <constraint firstItem="bgx-a5-WZx" firstAttribute="top" secondItem="OXo-ce-aY3" secondAttribute="bottom" constant="26" id="ICU-Cz-82V"/>
+                            <constraint firstItem="yuY-If-HFw" firstAttribute="top" secondItem="bgx-a5-WZx" secondAttribute="bottom" constant="60" id="M1L-DG-BDW"/>
+                            <constraint firstItem="OXo-ce-aY3" firstAttribute="centerX" secondItem="Mml-Zg-ijJ" secondAttribute="centerX" id="Mmv-TF-L6b"/>
+                            <constraint firstItem="bgx-a5-WZx" firstAttribute="centerX" secondItem="yuY-If-HFw" secondAttribute="centerX" id="ccu-qt-Rmh"/>
+                            <constraint firstItem="ZtN-WS-em6" firstAttribute="bottom" secondItem="yuY-If-HFw" secondAttribute="bottom" constant="327" id="lsz-Uw-pQ4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="square.and.arrow.up.badge.clock" catalog="system" id="Jgl-Tt-QXe"/>
+                    <connections>
+                        <outlet property="imageView" destination="OXo-ce-aY3" id="IUy-Of-t3P"/>
+                        <outlet property="yorumTextField" destination="bgx-a5-WZx" id="Whu-Ug-WnW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ATF-Kc-bQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1881" y="316"/>
+            <point key="canvasLocation" x="1879.7101449275365" y="315.40178571428572"/>
         </scene>
         <!--Feed-->
         <scene sceneID="9mb-3f-EWC">
@@ -156,7 +197,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lmk-Ee-c85">
             <objects>
-                <tabBarController id="1Uz-0Z-xfx" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="1Uz-0Z-xfx" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="nDb-ta-Niv"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rIo-3f-1XO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -176,6 +217,7 @@
     </scenes>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gorselSec" width="920" height="980"/>
         <image name="shared.with.you" catalog="system" width="128" height="93"/>
         <image name="square.and.arrow.up.badge.clock" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">

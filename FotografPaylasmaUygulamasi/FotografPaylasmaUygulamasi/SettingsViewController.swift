@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
 
@@ -16,7 +17,14 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func cikisyapTiklandi(_ sender: Any) {
-        performSegue(withIdentifier: "toViiewController", sender: nil)
+        do{
+            try Auth.auth().signOut()
+            performSegue(withIdentifier: "toViiewController", sender: nil)
+
+        } catch{
+            print("Hata!")
+        }
+        
     }
     
   
