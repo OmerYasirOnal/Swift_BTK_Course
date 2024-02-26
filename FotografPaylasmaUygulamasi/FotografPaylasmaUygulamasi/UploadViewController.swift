@@ -54,18 +54,42 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
             
-            let imageReference = mediaFolder.child("image.jpg")
+            let uuid = UUID().uuidString
+            let imageReference = mediaFolder.child("\(uuid).jpg")
             
             imageReference.putData(data, metadata: nil) { (storagemetadata, error) in
                 if error != nil {
-                    print(error?.localizedDescription as Any)
+                    hataMesajiGoster(title: "Hata", mesaj: error?.localizedDescription ?? "Hata Aldınız! Tekrar Deneyiniz!")
                 } else {
                     imageReference.downloadURL { (url, error) in
-                        if error != nil {
-                            let imageUrl = url?.absoluteString
-                            print(imageUrl as Any)
+                        if error == nil {
                             
-                        } 
+                            let imageUrl = url?.absoluteString
+                            
+                            if let imageUrl = imageUrl{
+                                
+                                
+                                let firestoreDatabase = Firestore.firestore()
+                                
+                                let firestorePost = ["gorselurl" : imageUrl, "yorum" : self.yorumTextField.text!, "email" : Auth.auth().currentUser!.email, "tarih" : FieldValue.serverTimestamp() ] as [String : Any]
+                                
+                                firestoreDatabase.collection("Post").addDocument(data: firestorePost) {
+                                    (error) in
+                                    if error != nil {
+                                        hataMesajiGoster(title: "Hata", mesaj: "Hata aldınız, Lütfen Tekrar Deneyiniz!")
+                                    } else {
+                                        
+                                        self.yorumTextField.text = ""
+                                        self.imageView.image = UIImage(named: "gorselSec")
+                                        self.tabBarController?.selectedIndex = 0
+                                    }
+                                }
+                            }
+                            
+                        
+                            
+                            
+                        }
                         
                     }
                     
@@ -74,7 +98,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
         }
         
-        
+        func hataMesajiGoster(title: String, mesaj: String){
+            let alert = UIAlertController(title: title, message: mesaj, preferredStyle: UIAlertController.Style.alert)
+            
+            let button = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            
+            alert.addAction(button)
+        }
         
     }
     
