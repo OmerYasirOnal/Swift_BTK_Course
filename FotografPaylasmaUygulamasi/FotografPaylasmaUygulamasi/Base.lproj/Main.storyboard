@@ -186,72 +186,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-ug-Xpu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="djU-1t-7zC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="847"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="319" id="j1s-f8-nm0" customClass="FeedCell" customModule="FotografPaylasmaUygulamasi" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="319"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="365" id="YPM-oz-woP" customClass="FeedCell" customModule="FotografPaylasmaUygulamasi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="365"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j1s-f8-nm0" id="MJD-KJ-4q7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="319"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YPM-oz-woP" id="aH2-oe-6jO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="365"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzQ-OY-sN9">
-                                                    <rect key="frame" x="20" y="11" width="370" height="36"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gorselSec" translatesAutoresizingMaskIntoConstraints="NO" id="9x4-rd-QED">
+                                                    <rect key="frame" x="29" y="54" width="356" height="258"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="370" id="3p8-ym-VOL"/>
-                                                        <constraint firstAttribute="height" constant="36" id="jsi-SD-CrA"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="258" id="Hed-Em-WKC"/>
+                                                        <constraint firstAttribute="height" constant="258" id="WTU-fo-Mg6"/>
+                                                        <constraint firstAttribute="width" constant="356" id="dUN-tu-bcM"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyE-nw-9oh">
+                                                    <rect key="frame" x="29" y="11" width="356" height="34.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="356" id="GUF-du-Qsr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUz-Md-ZZ4">
-                                                    <rect key="frame" x="21" y="55" width="372" height="220"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="372" id="ayG-dw-npc"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kullanıcı yorumu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-NQ-BCq">
-                                                    <rect key="frame" x="18" y="283" width="372" height="26"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyK-qX-r6M">
+                                                    <rect key="frame" x="29" y="319.5" width="356" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oUz-Md-ZZ4" firstAttribute="top" secondItem="TzQ-OY-sN9" secondAttribute="bottom" constant="8" id="3BT-tE-qPM"/>
-                                                <constraint firstItem="TzQ-OY-sN9" firstAttribute="top" secondItem="MJD-KJ-4q7" secondAttribute="topMargin" id="7rv-v2-zm1"/>
-                                                <constraint firstItem="TzQ-OY-sN9" firstAttribute="trailing" secondItem="x1d-NQ-BCq" secondAttribute="trailing" id="Z0n-AL-y76"/>
-                                                <constraint firstItem="x1d-NQ-BCq" firstAttribute="leading" secondItem="MJD-KJ-4q7" secondAttribute="leadingMargin" constant="-2" id="ZdL-Am-fS5"/>
-                                                <constraint firstItem="oUz-Md-ZZ4" firstAttribute="centerX" secondItem="MJD-KJ-4q7" secondAttribute="centerX" id="e6f-tr-zml"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="x1d-NQ-BCq" secondAttribute="bottom" constant="-1" id="lCB-Vf-jRm"/>
-                                                <constraint firstItem="x1d-NQ-BCq" firstAttribute="top" secondItem="oUz-Md-ZZ4" secondAttribute="bottom" constant="8" id="nNk-Sk-0S1"/>
-                                                <constraint firstItem="TzQ-OY-sN9" firstAttribute="leading" secondItem="MJD-KJ-4q7" secondAttribute="leadingMargin" id="uS2-VG-il7"/>
+                                                <constraint firstItem="GyE-nw-9oh" firstAttribute="leading" secondItem="9x4-rd-QED" secondAttribute="leading" id="BTW-U0-h6b"/>
+                                                <constraint firstItem="9x4-rd-QED" firstAttribute="top" secondItem="GyE-nw-9oh" secondAttribute="bottom" constant="8.5" id="FtK-t7-dJH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qyK-qX-r6M" secondAttribute="bottom" constant="1" id="Jjx-DO-i6c"/>
+                                                <constraint firstItem="GyE-nw-9oh" firstAttribute="trailing" secondItem="9x4-rd-QED" secondAttribute="trailing" id="LKy-lD-Il3"/>
+                                                <constraint firstItem="GyE-nw-9oh" firstAttribute="centerX" secondItem="aH2-oe-6jO" secondAttribute="centerX" id="OyU-wx-JAW"/>
+                                                <constraint firstItem="GyE-nw-9oh" firstAttribute="top" secondItem="aH2-oe-6jO" secondAttribute="topMargin" id="U5j-ue-sVD"/>
+                                                <constraint firstItem="qyK-qX-r6M" firstAttribute="top" secondItem="9x4-rd-QED" secondAttribute="bottom" constant="7.5" id="daN-s5-Co6"/>
+                                                <constraint firstItem="9x4-rd-QED" firstAttribute="leading" secondItem="qyK-qX-r6M" secondAttribute="leading" id="dju-NT-P6t"/>
+                                                <constraint firstItem="9x4-rd-QED" firstAttribute="centerY" secondItem="aH2-oe-6jO" secondAttribute="centerY" constant="0.5" id="m6V-TI-vNu"/>
+                                                <constraint firstItem="9x4-rd-QED" firstAttribute="trailing" secondItem="qyK-qX-r6M" secondAttribute="trailing" id="pd5-dP-krC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="emailLabel" destination="TzQ-OY-sN9" id="9Zo-8p-YcA"/>
-                                            <outlet property="postImageView" destination="oUz-Md-ZZ4" id="UYq-Lr-Wax"/>
-                                            <outlet property="yorumLabel" destination="x1d-NQ-BCq" id="NQO-cg-Fsu"/>
+                                            <outlet property="emailLabel" destination="GyE-nw-9oh" id="loq-bC-uuU"/>
+                                            <outlet property="postImageView" destination="9x4-rd-QED" id="UZZ-HV-cS6"/>
+                                            <outlet property="yorumLabel" destination="qyK-qX-r6M" id="AeD-QP-fVT"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cum-js-ypV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gV1-ug-Xpu" firstAttribute="top" secondItem="cum-js-ypV" secondAttribute="top" id="Dir-Ed-UUg"/>
-                            <constraint firstItem="gV1-ug-Xpu" firstAttribute="centerX" secondItem="AJe-7z-rKb" secondAttribute="centerX" id="HjN-rz-KqA"/>
-                            <constraint firstItem="gV1-ug-Xpu" firstAttribute="bottom" secondItem="cum-js-ypV" secondAttribute="bottom" id="k1K-IY-j9i"/>
-                            <constraint firstItem="gV1-ug-Xpu" firstAttribute="leading" secondItem="cum-js-ypV" secondAttribute="leading" id="nut-eU-De4"/>
+                            <constraint firstAttribute="trailing" secondItem="djU-1t-7zC" secondAttribute="trailing" id="Hms-8r-TxO"/>
+                            <constraint firstItem="djU-1t-7zC" firstAttribute="leading" secondItem="AJe-7z-rKb" secondAttribute="leading" id="UOv-3g-SYw"/>
+                            <constraint firstItem="djU-1t-7zC" firstAttribute="top" secondItem="cum-js-ypV" secondAttribute="top" id="Uvr-Xz-tA6"/>
+                            <constraint firstItem="djU-1t-7zC" firstAttribute="bottom" secondItem="cum-js-ypV" secondAttribute="bottom" id="V0z-gK-54w"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="shared.with.you" catalog="system" id="SPF-NK-wld"/>
                     <connections>
-                        <outlet property="tableView" destination="gV1-ug-Xpu" id="PTz-Zo-vTi"/>
+                        <outlet property="tableView" destination="djU-1t-7zC" id="UuP-3B-8Lr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcE-ZC-JZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
